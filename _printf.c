@@ -18,9 +18,9 @@ int _printf(const char *format, ...)
 
 	if (format == NULL)
 		return (-1);
-	
+
 	va_start(list, format);
-	
+
 	for (C = 0; format && format[C] != '\0'; C++)
 	{
 		if (format[C] != '%')
@@ -39,9 +39,9 @@ int _printf(const char *format, ...)
 			size = get_size(format, &C);
 			++C;
 			Print = handle_print(format, &C, list, Buffer,
-					flags, width, precision, size);
+				flags, width, precision, size);
 			if (Print == -1)
-					return (-1);
+				return (-1);
 			P_chars += Print;
 		}
 	}
