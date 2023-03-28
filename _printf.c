@@ -40,7 +40,7 @@ int _printf(const char *format, ...)
 			++C;
 			Print = handle_print(format, &C, list, Buffer,
 					flags, width, precision, size);
-			if (Print == -1
+			if (Print == -1)
 					return (-1);
 			P_chars += Print;
 		}
